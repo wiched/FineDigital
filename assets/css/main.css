@@ -484,22 +484,24 @@ main {
         margin-right: 0; }
       @media screen and (max-width: 1020px) {
         main section.services-short .ecommerce {
-          margin-right: 1.5% !important;
-          margin-left: 1.5% !important;
           margin-bottom: 3%;
           max-width: 1200px;
           margin-left: auto;
           margin-right: auto;
           float: left;
           display: block;
-          margin-right: 7.42297%;
-          width: 46.28851%; }
+          margin-right: 2.35765%;
+          width: 48.82117%; }
           main section.services-short .ecommerce::after {
             clear: both;
             content: "";
             display: block; }
           main section.services-short .ecommerce:last-child {
-            margin-right: 0; } }
+            margin-right: 0; }
+          main section.services-short .ecommerce:nth-child(4n) {
+            margin-right: 0; }
+          main section.services-short .ecommerce:nth-child(4n+1) {
+            clear: left; } }
     main section.services-short .otherservices {
       float: left;
       display: block;
