@@ -8,7 +8,66 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/assets/css/main.css">
     
-
+<style>
+  *, ::after, ::before { box-sizing: inherit; }
+  html { text-size-adjust: 100%; box-sizing: border-box; }
+  html, body { min-height: 100vh; }
+  body { margin: 0px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 14px; line-height: 1.6; font-family: "PT Sans Narrow", sans-serif; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: rgb(255, 244, 152); background: rgb(255, 255, 255); color: rgb(46, 45, 51); text-size-adjust: 100%; }
+  .home-wrap { background: rgb(240, 240, 241); }
+  .infobar { max-width: 1200px; margin-left: auto; margin-right: auto; background-color: rgb(255, 255, 255); }
+  .infobar .contactdetails { float: left; margin-right: 2.35765%; width: 31.7616%; text-align: center; display: table; min-height: 55px; font-size: 14px; font-family: Roboto, serif; font-weight: 400; }
+  .infobar .contactdetails span { display: table-cell; vertical-align: middle; }
+  .logo { overflow: hidden; text-indent: 101%; white-space: nowrap; background-image: url("/assets/img/fd-logo.png"); background-repeat: no-repeat; background-position: center center; background-size: contain; max-height: 50px; padding: 0px; margin: 0px; }
+  .infobar .logo { float: left; display: block; margin-right: 2.35765%; width: 31.7616%; max-height: 40px; margin-top: 7px; }
+  h1, h2, h3, h4, p, blockquote, figure, ol, ul { margin: 0.67em 0px; padding: 0px; }
+  h1, h2, h3, h4 { font-size: inherit; }
+  .gigantic, .huge, .large, .bigger, .big, h1, h2, h3, h4, h5, h6 { color: rgb(0, 0, 0); font-weight: bold; }
+  .huge, h1 { font-size: 68px; line-height: 1.05; letter-spacing: -1px; }
+  a, button { color: inherit; transition: 0.3s; }
+  a { text-decoration: none; color: rgb(0, 0, 0); outline: 0px; }
+  .infobar .infobar-cta { float: left; margin-right: 2.35765%; width: 31.7616%; min-height: 55px; display: table; text-align: center; }
+  .infobar .infobar-cta:last-child { margin-right: 0px; }
+  .infobar .infobar-cta span { display: table-cell; vertical-align: middle; }
+  .infobar .infobar-cta span a.button { color: rgb(255, 255, 255); padding: 1em 2em; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 9px; background: rgb(239, 103, 47); border-radius: 3px; transition: all 300ms; }
+  nav { overflow: hidden; transition: max-height 0.2s ease; }
+  ul { border-bottom: 1px solid rgb(204, 204, 204); list-style: none; margin: 0px 0px 1.5rem; padding: 0px; }
+  [id^="fun"] ul { background-color: rgb(37, 37, 37); border: 0px; display: flex; padding: 0px 2rem; position: relative; }
+  main, li { display: block; }
+  li { background-size: 100% 200%; background-position: center top; color: rgb(102, 102, 102); display: block; text-align: center; text-decoration: none; transition: all 0.25s ease-in-out; }
+  [id^="fun"] ul li { -webkit-box-flex: 1; flex: 1 1 auto; }
+  [id^="fun"] ul li:first-child { max-width: 50px; display: flex; -webkit-box-pack: justify; justify-content: space-between; }
+  #fun1 ul li { border-left: 2px solid rgb(221, 221, 221); }
+  #fun1 > ul > li:nth-child(1) { border: none; margin-right: 20px; transform: skew(0deg) !important; }
+  li a { color: rgb(255, 255, 255); display: block; padding: 1rem 0px; transition: all 0.25s ease-in-out; text-decoration: none; text-transform: uppercase; font-family: Oswald, serif; line-height: 1; }
+  #fun1 ul .logo a { transform: skew(0deg); border: none; margin-top: 5px; margin-left: 20px; margin-right: 20px; }
+  #mobile-toggle { width: 28px; height: 28px; margin-top: 14px; position: absolute; top: 0px; right: 10px; z-index: 9; }
+  [id^="fun"] ul #mobile-toggle { display: none; transform: skew(0deg); }
+  #mobile-toggle span { position: relative; display: block; }
+  #mobile-toggle span, #mobile-toggle span::after, #mobile-toggle span::before { width: 100%; height: 3px; background-color: white; transition: all 0.3s; backface-visibility: hidden; border-radius: 2px; }
+  .currentPage { background-position: center bottom; color: rgba(0, 0, 0, 0.74902); }
+  li:nth-child(2) { background-image: linear-gradient(transparent 50%, rgb(33, 100, 152) 50%, rgb(33, 100, 152) 95%, rgba(33, 100, 152, 0.65098) 95%) !important; }
+  li:nth-child(3) { background-image: linear-gradient(transparent 50%, rgb(151, 191, 42) 50%, rgb(151, 191, 42) 95%, rgba(151, 191, 42, 0.85098) 95%) !important; }
+  li:nth-child(4) { background-image: linear-gradient(transparent 50%, rgb(102, 78, 162) 50%, rgb(102, 78, 162) 95%, rgba(102, 78, 162, 0.498039) 95%) !important; }
+  li:nth-child(5) { background-image: linear-gradient(transparent 50%, rgb(218, 60, 145) 50%, rgb(218, 60, 145) 95%, rgba(218, 60, 145, 0.85098) 95%) !important; }
+  li:nth-child(6) { background-image: linear-gradient(transparent 50%, rgb(238, 51, 58) 50%, rgb(238, 51, 58) 95%, rgba(238, 51, 58, 0.85098) 95%) !important; }
+  li:nth-child(7) { background-image: linear-gradient(transparent 50%, rgb(247, 133, 62) 50%, rgb(247, 133, 62) 95%, rgba(247, 133, 62, 0.85098) 95%) !important; }
+  #fun1 ul li:last-child { border-right: 2px solid rgb(221, 221, 221); }
+  main { max-width: 1200px; margin-left: auto; margin-right: auto; margin-bottom: 3em; }
+  main section.hometitle { float: left; display: block; margin-right: 2.35765%; width: 100%; text-align: center; }
+  .bigger, h3 { font-size: 26px; line-height: 1.38; }
+  main section.services-short { max-width: 980px; margin-left: auto; margin-right: auto; }
+  .service { padding: 0px 15px; background: rgb(208, 208, 208); transition: background 0.5s, opacity 0.9s, margin 0.2s; text-align: center; border-radius: 4px; }
+  main section.services-short .webdesign { float: left; display: block; margin-right: 2.35765%; width: 23.2318%; min-height: 249px; opacity: 1; }
+  .service h3 { font-size: 23px; text-transform: uppercase; font-weight: normal; margin-top: 1em; }
+  .service .shortDesc { font-size: 16px; line-height: 18px; margin: 0px 0px 25px; color: rgb(17, 17, 17); }
+  p { margin: 0px 0px 20px; }
+  .hLine { display: block; width: 60px; height: 1px; margin: 24px auto 13px; background-color: rgb(136, 136, 136); transition: background-color 0.2s linear; }
+  .service .readMore { display: inline-block; border-radius: 4px; opacity: 1; transform: scale(1.1); color: rgb(17, 130, 197); text-transform: uppercase; padding: 6px 24px; transition: color 0.2s linear, background-color 0.2s linear; }
+  main section.services-short .webdevelopment { float: left; display: block; margin-right: 2.35765%; width: 23.2318%; min-height: 249px; opacity: 1; }
+  main section.services-short .ecommerce { float: left; display: block; margin-right: 2.35765%; width: 23.2318%; min-height: 249px; opacity: 1; }
+  main section.services-short .otherservices { float: left; display: block; width: 23.2318%; min-height: 249px; margin-right: 0px; opacity: 1; }
+  main section.services-short .otherservices:last-child { margin-right: 0px; }
+</style>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage"
         class="">
