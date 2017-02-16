@@ -3,7 +3,7 @@
 @import "0-tools/fonts";
 @import "1-base/vars";
 @import "0-tools/bourbon/bourbon";
-
+$visual-grid: false;
 @import "0-tools/neat/neat";
 @import "1-base/base";
 @import "3-sections/header";
